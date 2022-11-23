@@ -34,12 +34,12 @@ const Login = () => {
       })
       .catch((error) => {
         // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
         // The email of the user's account used.
-        const email = error.customData.email;
+        // const email = error.customData.email;
         // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
+        // const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
       });
   };
@@ -120,52 +120,57 @@ const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <div className="grid grid-rows-4 grid-flow-col gap-4">
-        <div className="bg-white rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
-          <div>
-            <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"></span>
-          </div>
-          <button className="btn-primary" onClick={handleGoogleLogin}>
-            Login with Google
-          </button>
-          <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
-            User {account ? "Login" : "Registration"}
-          </h3>
-          <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-            The Zero Gravity Pen can be used to write in any orientation,
-            including upside-down. It even works in outer space.
-          </p>
-          <form onSubmit={handleAuthentication}>
-            <label>Email address</label>
-            <input
-              type="email"
-              onChange={getEmailAddress}
-              className="form-input px-4 py-3 rounded-full"
-            />
-            <label>Password</label>
-            <input
-              type="password"
-              onChange={getPassword}
-              className="form-input px-4 py-3 rounded-full"
-            />
-            <input
-              type="submit"
-              className="btn-primary"
-              value={account ? "Login" : "Registration"}
-            />
-          </form>
-          <hr />
+      <button className="btn-primary" onClick={handleGoogleLogin}>
+        Login with Google
+      </button>
+      <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
+        User {account ? "Login" : "Registration"}
+      </h3>
+      <form onSubmit={handleAuthentication}>
+        <div className="mb-6">
+          <label
+            htmlFor="email"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Email address
+          </label>
           <input
-            onChange={handleAccount}
-            type="checkbox"
-            className="appearance-none indeterminate:bg-gray-300"
-          />{" "}
-          Already have account?
-          <hr />
-          <div>{error}</div>
-          <h2 onClick={requestAPI}>Check API</h2>
+            type="email"
+            onChange={getEmailAddress}
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
         </div>
-      </div>
+        <div className="mb-6">
+          <label
+            htmlFor="password"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Password
+          </label>
+          <input
+            type="password"
+            onChange={getPassword}
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-6">
+          <input
+            type="submit"
+            className="btn-primary"
+            value={account ? "Login" : "Registration"}
+          />
+        </div>
+      </form>
+      <hr />
+      <input
+        onChange={handleAccount}
+        type="checkbox"
+        className="appearance-none indeterminate:bg-gray-300"
+      />{" "}
+      Already have account?
+      <hr />
+      <div>{error}</div>
+      <h2 onClick={requestAPI}>Check API</h2>
     </div>
   );
 };

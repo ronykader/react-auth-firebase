@@ -119,10 +119,9 @@ const Login = () => {
 
   return (
     <div>
-      <h1>Login</h1>
-      <button className="btn-primary" onClick={handleGoogleLogin}>
-        Login with Google
-      </button>
+      <h3 className="text-3xl font-bold tracking-tight sm:text-center sm:text-4xl mb-10">
+        Login
+      </h3>
       <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
         User {account ? "Login" : "Registration"}
       </h3>
@@ -159,6 +158,13 @@ const Login = () => {
             className="btn-primary"
             value={account ? "Login" : "Registration"}
           />
+          <span className="mr-5 ml-5">or</span>
+          <button
+            className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+            onClick={handleGoogleLogin}
+          >
+            Login with Google
+          </button>
         </div>
       </form>
       <hr />

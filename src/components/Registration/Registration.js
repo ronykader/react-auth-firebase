@@ -3,7 +3,9 @@ import React from "react";
 const Registration = () => {
   return (
     <div>
-      <h1>Registration</h1>
+      <h3 className="text-3xl font-bold tracking-tight sm:text-center sm:text-4xl mb-10">
+        Registration
+      </h3>
 
       <form>
         <div className="mb-6">

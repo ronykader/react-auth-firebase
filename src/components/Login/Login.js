@@ -25,11 +25,11 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
         // The signed-in user info.
-        const user = result.user;
-        console.log(token, user);
+        // const user = result.user;
+        // console.log(token, user);
         // ...
       })
       .catch((error) => {
@@ -91,8 +91,8 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
-        console.log(user);
+        // const user = userCredential.user;
+        // console.log(user);
       })
       .catch((error) => {
         // const errorCode = error.code;
@@ -110,10 +110,10 @@ const Login = () => {
         // password: "12345678",
       })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
   };
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Article from "./components/Article/Article";
+import Create from "./components/Article/Create";
+import Details from "./components/Article/Details";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -24,6 +26,8 @@ const App = () => {
                         <Route exact path="/" element={<Home />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/article" element={<Article />} />
+                        <Route path="/article/create" element={<Create />} />
+                        <Route path="/article/:id" element={<Details />} />
                         <Route
                           path="/registration"
                           element={<Registration />}

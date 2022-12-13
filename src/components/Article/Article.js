@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Spinner } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -40,7 +41,7 @@ const Article = () => {
               Articles
             </h3>
             {loading ? (
-              "Loading"
+              <Spinner />
             ) : (
               <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -77,7 +78,7 @@ const Article = () => {
                         </th>
                         <td className="py-4 px-6">{article.title}</td>
                         <td className="py-4 px-6">{article.article}</td>
-                        <td className="py-4 px-6">{article.created_at}</td>
+                        <td className="py-4 px-6">{article.createdAt}</td>
                         <td className="py-4 px-6">
                           <Link
                             to={`/article/${article.id}`}

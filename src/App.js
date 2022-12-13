@@ -7,6 +7,7 @@ import Edit from "./components/Article/Edit";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
 import Registration from "./components/Registration/Registration";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/article/:id" element={<Details />} />
             <Route path="/article/edit/:id" element={<Edit />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
           </Routes>
         </main>

@@ -34,6 +34,7 @@ const Home = () => {
                   <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                     {article.article}
                   </p>
+                  <strong>{article.createdAt}</strong>
                 </div>
                 <hr className="mt-10 pb-10" />
               </div>

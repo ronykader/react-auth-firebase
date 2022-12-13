@@ -8,13 +8,10 @@ const Header = () => {
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="https://beta-idp.stage.mygov.bd/img/logo.png"
               className="h-6 mr-3 sm:h-9"
-              alt="Flowbite Logo"
+              alt="myGov Logo"
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
-            </span>
           </Link>
           <div className="flex md:order-2">
             <button
@@ -101,6 +98,15 @@ const Header = () => {
                   aria-current="page"
                 >
                   Create Article
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`/profile`}
+                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  aria-current="page"
+                >
+                  Profile
                 </Link>
               </li>
 
